@@ -17,6 +17,10 @@ public class Estado {
     @Column(name = "POPULACAO")
     private Double populacao;
 
+    @ManyToOne
+    @JoinColumn(name = "I_PAISES", referencedColumnName = "ID")
+    private Pais pais;
+
     public Estado() {
     }
 
@@ -50,5 +54,13 @@ public class Estado {
 
     public Long getId() {
         return id;
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 }
