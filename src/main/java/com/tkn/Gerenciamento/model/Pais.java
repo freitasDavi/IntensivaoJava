@@ -1,5 +1,7 @@
 package com.tkn.Gerenciamento.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +11,7 @@ public class Pais {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull
     @Column(name = "NOME")
     private String nome;
 
